@@ -1,3 +1,10 @@
+// import { Header } from '../components/Header'
+
 export const History = () => {
-  return <h1>History</h1>
+  return (
+    <div>
+      {/* <Header /> */}
+      <h1>History</h1>
+    </div>
+  )
 }

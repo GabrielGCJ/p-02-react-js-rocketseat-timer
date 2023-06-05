@@ -1,3 +1,10 @@
+// import { Header } from '../components/Header'
+
 export const Home = () => {
-  return <h1>Home</h1>
+  return (
+    <div>
+      {/* <Header /> */}
+      <h1>Home</h1>
+    </div>
+  )
 }
