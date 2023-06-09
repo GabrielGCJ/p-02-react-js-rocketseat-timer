@@ -21,7 +21,7 @@ export const History = () => {
               <td>20 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status>Concluido</Status>
+                <Status statusColor="green">Concluido</Status>
               </td>
             </tr>
             <tr>
@@ -29,7 +29,7 @@ export const History = () => {
               <td>20 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status>Concluido</Status>
+                <Status statusColor="red">Interrompido</Status>
               </td>
             </tr>
             <tr>
@@ -37,7 +37,7 @@ export const History = () => {
               <td>20 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status>Concluido</Status>
+                <Status statusColor="green">Concluido</Status>
               </td>
             </tr>
             <tr>
@@ -45,7 +45,7 @@ export const History = () => {
               <td>20 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status>Concluido</Status>
+                <Status statusColor="green">Concluido</Status>
               </td>
             </tr>
             <tr>
@@ -53,7 +53,7 @@ export const History = () => {
               <td>20 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status>Concluido</Status>
+                <Status statusColor="green">Concluido</Status>
               </td>
             </tr>
             <tr>
@@ -61,7 +61,7 @@ export const History = () => {
               <td>20 minutos</td>
               <td>Há 2 meses</td>
               <td>
-                <Status>Concluido</Status>
+                <Status statusColor="yellow">Em andamento</Status>
               </td>
             </tr>
           </tbody>
