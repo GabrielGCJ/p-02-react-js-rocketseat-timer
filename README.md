@@ -8,13 +8,13 @@ Este é o segundo projeto da Rocket Ignite com ReactJS, um programa de capacita�
 
 Neste projeto, desenvolvemos um timer no estilo pomodoro utilizando TypeScript. A estilização foi feita utilizando styled-components. Além disso, aplicamos diversos conceitos, tais como:
 
-Gerenciamento de estados
-Utilização da Context API
-Armazenamento local com o LocalStorage
-Manutenção da imutabilidade do estado
-Trabalho com listas e chaves no ReactJS
-Passagem de propriedades entre componentes
-Componentização do código
+- Gerenciamento de estados
+- Utilização da Context API
+- Armazenamento local com o LocalStorage
+- Manutenção da imutabilidade do estado
+- Trabalho com listas e chaves no ReactJS
+- Passagem de propriedades entre componentes
+- Componentização do código
 
 ### Para rodar o projeto:
 
