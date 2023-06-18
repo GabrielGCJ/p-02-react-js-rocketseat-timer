@@ -20,6 +20,15 @@ Neste projeto, desenvolvemos um timer no estilo pomodoro utilizando TypeScript. 
 
 ----
 
+#### Este projeto está de acordo com este layout do Figma:
+
+https://www.figma.com/community/file/1127351821076435124/Ignite-Timer
+
+![image](https://github.com/GabrielGCJ/ignite-02-timer/assets/91347602/7d171ff9-87ba-4ba9-8d56-e039498c5a89)
+
+----
+
+
 ### Para rodar o projeto:
 
 Clone este repositório em sua máquina:
