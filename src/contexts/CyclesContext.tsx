@@ -1,17 +1,9 @@
 import { ReactNode, createContext, useReducer, useState } from 'react'
+import { ActionTypes, Cycle, cyclesReducer } from '../reducers/Cycles'
 
 interface CreateCycleData {
   task: string
   minutesAmount: number
-}
-
-interface Cycle {
-  id: string
-  task: string
-  minutesAmount: number
-  startDate: Date
-  interruptedDate?: Date
-  finishedDate?: Date
 }
 
 interface CyclesContextType {
@@ -31,99 +23,16 @@ interface CyclesContextProviderProps {
   children: ReactNode
 }
 
-interface CyclesState {
-  cycles: Cycle[]
-  activeCycleId: string | null
-}
-
 export const CycleContextProvider = ({
   children,
 }: CyclesContextProviderProps) => {
   // const [cycles, setCycles] = useState<Cycle[]>([])
 
-  const [cyclesState, dispatch] = useReducer(
-    (state: CyclesState, action: any) => {
-      switch (action.type) {
-        case 'ADD_NEW_CYCLE':
-          return {
-            ...state,
-            cycles: [...state.cycles, action.payload.newCycle],
-            activeCycleId: action.payload.newCycle.id,
-          }
-        case 'INTERRUPT_CURRENT_CYCLE':
-          return {
-            ...state,
-            cycles: state.cycles.map((cycle) => {
-              if (cycle.id === state.activeCycleId) {
-                return { ...cycle, interruptedDate: new Date() }
-              } else {
-                return cycle
-              }
-            }),
-            activeCycleId: null,
-          }
+  const [cyclesState, dispatch] = useReducer(cyclesReducer, {
+    cycles: [],
+    activeCycleId: null,
+  })
 
-        case 'MARK_CURRENT_CYCLE_AS_FINISHED':
-          return {
-            ...state,
-            cycles: state.cycles.map((cycle) => {
-              if (cycle.id === state.activeCycleId) {
-                return { ...cycle, finishedDate: new Date() }
-              } else {
-                return cycle
-              }
-            }),
-            activeCycleId: null,
-          }
-
-        default:
-          return state
-      }
-
-      // Abaixo temos o mesmo codigo usando if's, otimo para exemplificar...
-
-      // if (action.type === 'ADD_NEW_CYCLE') {
-      //   return {
-      //     ...state,
-      //     cycles: [...state.cycles, action.payload.newCycle],
-      //     activeCycleId: action.payload.newCycle.id,
-      //   }
-      // }
-      // if (action.type === 'INTERRUPT_CURRENT_CYCLE') {
-      //   return {
-      //     ...state,
-      //     cycles: state.cycles.map((cycle) => {
-      //       if (cycle.id === state.activeCycleId) {
-      //         return { ...cycle, interruptedDate: new Date() }
-      //       } else {
-      //         return cycle
-      //       }
-      //     }),
-      //     activeCycleId: null,
-      //   }
-      // }
-      // if (action.type === 'MARK_CURRENT_CYCLE_AS_FINISHED') {
-      //   return {
-      //     ...state,
-      //     cycles: state.cycles.map((cycle) => {
-      //       if (cycle.id === state.activeCycleId) {
-      //         return { ...cycle, finishedDate: new Date() }
-      //       } else {
-      //         return cycle
-      //       }
-      //     }),
-      //     activeCycleId: null,
-      //   }
-      // }
-      // return state
-    },
-    {
-      cycles: [],
-      activeCycleId: null,
-    },
-  )
-
-  // const [activeCycleId, setActiveCycleId] = useState<string | null>(null)
   const [amountSecondPassed, SetAmountSecondPassed] = useState(0)
 
   const { cycles, activeCycleId } = cyclesState
@@ -136,7 +45,7 @@ export const CycleContextProvider = ({
 
   const markCurrentCycleAsFinished = () => {
     dispatch({
-      type: 'MARK_CURRENT_CYCLE_AS-FINISHED',
+      type: ActionTypes.MARK_CURRENT_CYCLE_AS_FINISHED,
       payload: {
         activeCycleId,
       },
@@ -164,7 +73,7 @@ export const CycleContextProvider = ({
     }
 
     dispatch({
-      type: 'ADD_NEW_CYCLE',
+      type: ActionTypes.ADD_NEW_CYCLE,
       payload: {
         newCycle,
       },
@@ -179,7 +88,7 @@ export const CycleContextProvider = ({
 
   const interruptCurrentCycle = () => {
     dispatch({
-      type: 'INTERRUPT_CURRENT_CYCLE',
+      type: ActionTypes.INTERRUPT_CURRENT_CYCLE,
       payload: {
         activeCycleId,
       },
