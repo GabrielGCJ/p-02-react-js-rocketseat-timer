@@ -40,34 +40,82 @@ export const CycleContextProvider = ({
   children,
 }: CyclesContextProviderProps) => {
   // const [cycles, setCycles] = useState<Cycle[]>([])
+
   const [cyclesState, dispatch] = useReducer(
     (state: CyclesState, action: any) => {
-      // console.log(state)
-      // console.log(action)
+      switch (action.type) {
+        case 'ADD_NEW_CYCLE':
+          return {
+            ...state,
+            cycles: [...state.cycles, action.payload.newCycle],
+            activeCycleId: action.payload.newCycle.id,
+          }
+        case 'INTERRUPT_CURRENT_CYCLE':
+          return {
+            ...state,
+            cycles: state.cycles.map((cycle) => {
+              if (cycle.id === state.activeCycleId) {
+                return { ...cycle, interruptedDate: new Date() }
+              } else {
+                return cycle
+              }
+            }),
+            activeCycleId: null,
+          }
 
-      if (action.type === 'ADD_NEW_CYCLE') {
-        return {
-          ...state,
-          cycles: [...state.cycles, action.payload.newCycle],
-          activeCycleId: action.payload.newCycle.id,
-        }
+        case 'MARK_CURRENT_CYCLE_AS_FINISHED':
+          return {
+            ...state,
+            cycles: state.cycles.map((cycle) => {
+              if (cycle.id === state.activeCycleId) {
+                return { ...cycle, finishedDate: new Date() }
+              } else {
+                return cycle
+              }
+            }),
+            activeCycleId: null,
+          }
+
+        default:
+          return state
       }
 
-      if (action.type === 'INTERRUPT_CURRENT_CYCLE') {
-        return {
-          ...state,
-          cycles: state.cycles.map((cycle) => {
-            if (cycle.id === state.activeCycleId) {
-              return { ...cycle, finishedDate: new Date() }
-            } else {
-              return cycle
-            }
-          }),
-          activeCycleId: null,
-        }
-      }
+      // Abaixo temos o mesmo codigo usando if's, otimo para exemplificar...
 
-      return state
+      // if (action.type === 'ADD_NEW_CYCLE') {
+      //   return {
+      //     ...state,
+      //     cycles: [...state.cycles, action.payload.newCycle],
+      //     activeCycleId: action.payload.newCycle.id,
+      //   }
+      // }
+      // if (action.type === 'INTERRUPT_CURRENT_CYCLE') {
+      //   return {
+      //     ...state,
+      //     cycles: state.cycles.map((cycle) => {
+      //       if (cycle.id === state.activeCycleId) {
+      //         return { ...cycle, interruptedDate: new Date() }
+      //       } else {
+      //         return cycle
+      //       }
+      //     }),
+      //     activeCycleId: null,
+      //   }
+      // }
+      // if (action.type === 'MARK_CURRENT_CYCLE_AS_FINISHED') {
+      //   return {
+      //     ...state,
+      //     cycles: state.cycles.map((cycle) => {
+      //       if (cycle.id === state.activeCycleId) {
+      //         return { ...cycle, finishedDate: new Date() }
+      //       } else {
+      //         return cycle
+      //       }
+      //     }),
+      //     activeCycleId: null,
+      //   }
+      // }
+      // return state
     },
     {
       cycles: [],
