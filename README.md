@@ -47,6 +47,18 @@ Rode o projeto:
 
 Acesse o endereço localhost porta 3333 em seu navegador ou ferramenta de testes para interagir com a API:
 
-http://localhost:3001
+http://localhost:3002
 
 ----
+
+![image](https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer/assets/91347602/0766694d-f9e2-476f-9573-0eee28bc6574)
+
+![image](https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer/assets/91347602/9fb6e6b2-6a12-48dd-b99a-fe2f1bfde55a)
+
+![image](https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer/assets/91347602/3db3b0a2-b247-4da6-b406-5d63b678f07f)
+
+![image](https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer/assets/91347602/e5f1f1c6-997d-42a7-9c19-dd4dcd3276fe)
+
+
+
+
