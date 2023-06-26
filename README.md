@@ -33,11 +33,11 @@ https://www.figma.com/community/file/1127351821076435124/Ignite-Timer
 
 Clone este repositório em sua máquina:
 
-`git clone https://github.com/GabrielGCJ/ignite-02-timer.git`
+`git clone https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer.git`
 
 Entre na pasta do projeto:
 
-`cd ignite-02-timer`
+`cd p-02-react-js-rocketseat-timer`
 
 Instale o projeto:
 
