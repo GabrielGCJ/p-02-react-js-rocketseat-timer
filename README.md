@@ -1,5 +1,3 @@
-# ignite-02-timer
-
 # Projeto 02 - ReactJS - Rocketseat
 Este é o segundo projeto da Rocket Ignite com ReactJS, um programa de capacitação intensiva em desenvolvimento de software.
 
