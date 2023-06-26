@@ -11,7 +11,7 @@ export const Header = () => {
   return (
     <HeaderContainer>
       <div>
-        <img src={logoIgnite} alt="" onClick={editTheme}></img>
+        <img src={logoIgnite} alt=""></img>
         {statusTheme === 'darkTheme' ? (
           <Sun size={24} onClick={editTheme} />
         ) : (
