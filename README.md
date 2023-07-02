@@ -1,6 +1,6 @@
 # <a href="https://gb-project-timer.surge.sh">Ignite Timer ⌚</a>
 
-## Projeto 02 - ReactJS - Rocketseat
+### Projeto 02 - ReactJS - Rocketseat
 Este é o segundo projeto da Rocket Ignite com ReactJS, um programa de capacitação intensiva em desenvolvimento de software.
 
 
@@ -62,6 +62,5 @@ http://localhost:3002
 ![image](https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer/assets/91347602/e5f1f1c6-997d-42a7-9c19-dd4dcd3276fe)
 
 ----
-<a href="https://gb-project-timer.surge.sh">Teste</a>
-https://gb-project-timer.surge.sh
+<a href="https://gb-project-timer.surge.sh"></a>
 
