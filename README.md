@@ -57,12 +57,9 @@ http://localhost:3002
 
 ![image](https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer/assets/91347602/3db3b0a2-b247-4da6-b406-5d63b678f07f)
 
-----
-
-gb-project-timer.surge.sh
-
 ![image](https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer/assets/91347602/e5f1f1c6-997d-42a7-9c19-dd4dcd3276fe)
 
+----
 
-
+https://gb-project-timer.surge.sh
 
