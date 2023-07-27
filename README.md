@@ -27,7 +27,6 @@ https://www.figma.com/community/file/1127351821076435124/Ignite-Timer
 
 ----
 
-
 ### Para rodar o projeto:
 
 Clone este repositório em sua máquina:
