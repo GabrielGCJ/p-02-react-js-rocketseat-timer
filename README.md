@@ -62,7 +62,7 @@ http://localhost:3002
 ----
 <a href="https://gb-project-timer.surge.sh"></a>
 
-----
+-----
 ### Artigos escritos pertinentes:
 
 #### <a href="https://dev.to/gabrielgcj/o-que-e-vite-e-quais-suas-vantagens-para-projetos-fron-end-3p5a">O que é Vite e quais suas vantagens para projetos fron-end?</a>
