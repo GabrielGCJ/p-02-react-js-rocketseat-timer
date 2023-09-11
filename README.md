@@ -29,21 +29,29 @@ https://www.figma.com/community/file/1127351821076435124/Ignite-Timer
 
 ### Para rodar o projeto:
 
-Clone este repositório em sua máquina:
+>Clone este repositório em sua máquina:
 
-```git clone https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer.git```
+```
+git clone https://github.com/GabrielGCJ/p-02-react-js-rocketseat-timer.git
+```
 
-Entre na pasta do projeto:
+>Entre na pasta do projeto:
 
-```cd p-02-react-js-rocketseat-timer```
+```
+cd p-02-react-js-rocketseat-timer
+```
 
-Instale o projeto:
+>Instale o projeto:
 
-```npm install```
+```
+npm install
+```
 
-Rode o projeto:
+>Rode o projeto:
 
-```npm run dev```
+```
+npm run dev
+```
 
 Acesse o endereço localhost porta 3333 em seu navegador ou ferramenta de testes para interagir com a API:
 
